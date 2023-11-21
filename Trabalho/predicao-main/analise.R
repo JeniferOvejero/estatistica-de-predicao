@@ -190,10 +190,10 @@ legend("topleft", lty = 1, col = c(1, "blue", "red"),
 
 # COMPARACAO GERAL SOBRADINHO ##################################################
 
-sobradinho_tabela_geral <- list(alpha_otimo, beta2, gama_ad) %>% map(accuracy)
+sobradinho_tabela_geral <- list(alpha_otimo, beta2, gama_mult) %>% map(accuracy)
 
 sobradinho_tabela_geral <- do.call(rbind, lapply(seq_along(sobradinho_tabela_geral), function(i) {
   data.frame(Modelo = paste("Modelo", i), sobradinho_tabela_geral[[i]])
 }))
-rownames(sobradinho_tabela_geral) <- c("alpha_otimo", "beta2", "gama_ad")
+rownames(sobradinho_tabela_geral) <- c("alpha_otimo", "beta2", "gama_mult")
 
